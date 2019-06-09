@@ -10,7 +10,11 @@ Tags :
 
 </p> <br />
 
-
+<p>
+	<%if @article.image.exists? %>
+	<%= image_tag @article.image.url(:medium) %>
+	<% end %>
+</p>
 
 <p><%= @article.body %></p> <br />
 
